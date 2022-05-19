@@ -1,0 +1,32 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "deploy": "firebase deploy --only functions:dialogflowFirebaseFulfillment --project nagarro-chatbot-qtac",
+    "logs": "firebase functions:log",
+    "dev": "nodemon --inspect index.js",
+    "start": "node index.js",
+    "tunnel": "ngrok http 5001"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "actions-on-google": "^2.2.0",
+    "dialogflow": "^0.6.0",
+    "dialogflow-fulfillment": "^0.5.0",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "node-geocoder": "^4.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0",
+    "ngrok": "^3.1.0",
+    "nodemon": "^1.18.9",
+    "standard": "^12.0.1"
+  },
+  "private": true
+}
